@@ -1,7 +1,7 @@
 from mpi4py import MPI
 import numpy as np
 from parMergesort_np import mergeSortParallelThreads
-from seqMergesort_np import merge, sequentialAlgorithm
+from seqMergesort_np import merge, mergesort
 import time
 import multiprocessing as mp
 
@@ -22,7 +22,7 @@ def parallelAlgorithm(gather=False):
 		chunks = None
 
 	local_chunk = comm.scatter(chunks, root=0)
-	local_sorted_chunk = mergeSortParallelThreads(local_chunk, n)
+	local_sorted_chunk = mergesort(local_chunk, n)
 
 	# gather merge
 	if gather:

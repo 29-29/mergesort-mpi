@@ -1,5 +1,12 @@
 import numpy as np
 
+def sequentialAlgorithm():
+	if rank == 0:
+		start = time.time()
+		mergesort(lystbck.copy())
+		elapsed = time.time() - start
+		print('Sequential: %f sec' % elapsed)
+
 def merge(left, right):
 	ret = np.empty(len(left) + len(right))
 	li = ri = 0
@@ -30,3 +37,9 @@ def mergesort(lyst):
 		return merge(left, right)
 
 	return _mergesort(lyst, 0, len(lyst))
+
+if __name__ == '__main__':
+	# Example usage
+	N = 1_000_000
+	lystbck = np.random.randint(1, N, N)
+	sequentialAlgorithm()

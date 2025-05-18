@@ -1,7 +1,7 @@
 from mpi4py import MPI
 import numpy as np
 from parMergesort_np import mergeSortParallelThreads
-from seqMergesort_np import merge, mergesort
+from seqMergesort_np import merge, sequentialAlgorithm
 import time
 import multiprocessing as mp
 
@@ -12,14 +12,6 @@ lystbck = np.random.randint(1, N, N)
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
-
-# sequential
-def sequentialAlgorithm():
-	if rank == 0:
-		start = time.time()
-		mergesort(lystbck.copy())
-		elapsed = time.time() - start
-		print('Sequential: %f sec' % elapsed)
 
 # parallel
 def parallelAlgorithm(gather=False):
@@ -59,12 +51,15 @@ def parallelAlgorithm(gather=False):
 		elapsed = time.time() - start
 		print('Parallel: %f sec' % elapsed)
 
-if __name__ == "__main__":
-	# mp.set_start_method('spawn', force=True)  # Use 'spawn' for Windows compatibility
-	# sequentialAlgorithm()
-	parallelAlgorithm()
+def numpyAlgorithm():
 	if rank == 0:
 		start = time.time()
 		np.sort(lystbck.copy())
 		elapsed = time.time() - start
 		print('NumPy sort: %f sec' % elapsed)
+
+if __name__ == "__main__":
+	# mp.set_start_method('spawn', force=True)  # Use 'spawn' for Windows compatibility
+	# sequentialAlgorithm()
+	parallelAlgorithm()
+	# numpyAlgorithm()

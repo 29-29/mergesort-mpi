@@ -22,8 +22,8 @@ def parallelAlgorithm(gather=False):
 		chunks = None
 
 	local_chunk = comm.scatter(chunks, root=0)
-	# local_sorted_chunk = mergesort(local_chunk) # sequential sort on each process
-	local_sorted_chunk = mergeSortParallelThreads(local_chunk, n) # parallel sort on each process
+	local_sorted_chunk = mergesort(local_chunk) # sequential sort on each process
+	# local_sorted_chunk = mergeSortParallelThreads(local_chunk, n) # parallel sort on each process
 
 	# gather merge
 	if gather:

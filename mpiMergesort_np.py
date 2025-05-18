@@ -22,7 +22,8 @@ def parallelAlgorithm(gather=False):
 		chunks = None
 
 	local_chunk = comm.scatter(chunks, root=0)
-	local_sorted_chunk = mergesort(local_chunk)
+	# local_sorted_chunk = mergesort(local_chunk) # sequential sort on each process
+	local_sorted_chunk = mergeSortParallelThreads(local_chunk, n) # parallel sort on each process
 
 	# gather merge
 	if gather:
@@ -61,5 +62,5 @@ def numpyAlgorithm():
 if __name__ == "__main__":
 	# mp.set_start_method('spawn', force=True)  # Use 'spawn' for Windows compatibility
 	# sequentialAlgorithm()
-	parallelAlgorithm()
+	parallelAlgorithm(gather=True)
 	# numpyAlgorithm()

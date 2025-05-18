@@ -22,7 +22,7 @@ def parallelAlgorithm(gather=False):
 		chunks = None
 
 	local_chunk = comm.scatter(chunks, root=0)
-	local_sorted_chunk = mergesort(local_chunk, n)
+	local_sorted_chunk = mergesort(local_chunk)
 
 	# gather merge
 	if gather:

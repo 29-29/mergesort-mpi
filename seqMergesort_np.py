@@ -1,11 +1,11 @@
 import numpy as np
+import time
 
 def sequentialAlgorithm():
-	if rank == 0:
-		start = time.time()
-		mergesort(lystbck.copy())
-		elapsed = time.time() - start
-		print('Sequential: %f sec' % elapsed)
+	start = time.time()
+	mergesort(lystbck.copy())
+	elapsed = time.time() - start
+	print('Sequential: %f sec' % elapsed)
 
 def merge(left, right):
 	ret = np.empty(len(left) + len(right))

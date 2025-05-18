@@ -1,4 +1,5 @@
 # March 24, 2025 (Monday)
+# code by Abdul Hamid Mangorangca
 
 '''
 Topics in Parallel and Distributed Computing:

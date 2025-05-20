@@ -56,14 +56,14 @@ def parallelAlgorithm(lyst, gather=False, pool=False, threads=1):
 
 	if rank == 0:
 		elapsed = time.time() - start
-		print('Parallel: %f sec' % elapsed)
+		print(elapsed)
 
 def numpyAlgorithm(lyst):
 	if rank == 0:
 		start = time.time()
 		np.sort(lyst.copy())
 		elapsed = time.time() - start
-		print('NumPy sort: %f sec' % elapsed)
+		print(elapsed)
 
 if __name__ == "__main__":
 	# mp.set_start_method('spawn', force=True)  # Use 'spawn' for Windows compatibility

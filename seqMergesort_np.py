@@ -5,7 +5,7 @@ def sequentialAlgorithm(lyst):
 	start = time.time()
 	mergesort(lyst.copy())
 	elapsed = time.time() - start
-	print('Sequential: %f sec' % elapsed)
+	print(elapsed)
 
 def merge(left, right):
 	ret = np.empty(len(left) + len(right))

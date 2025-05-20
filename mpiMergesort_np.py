@@ -14,16 +14,22 @@ rank = comm.Get_rank()
 size = comm.Get_size()
 
 # parallel
-def parallelAlgorithm(gather=False):
+def parallelAlgorithm(lyst, gather=False, pool=False, threads=1):
 	if rank == 0:
 		start = time.time()
-		chunks = np.array_split(lystbck.copy(), size)
+		chunks = np.array_split(lyst.copy(), size)
 	else:
 		chunks = None
 
 	local_chunk = comm.scatter(chunks, root=0)
-	local_sorted_chunk = mergesort(local_chunk) # sequential sort on each process
-	# local_sorted_chunk = mergeSortParallelThreads(local_chunk, n) # parallel sort on each process
+
+	# parallel sort on each node (via threads)
+	if pool:
+		local_sorted_chunk = mergeSortParallelThreads(local_chunk, threads)
+	
+	# sequential sort on each node
+	else:
+		local_sorted_chunk = mergesort(local_chunk)
 
 	# gather merge
 	if gather:
@@ -52,10 +58,10 @@ def parallelAlgorithm(gather=False):
 		elapsed = time.time() - start
 		print('Parallel: %f sec' % elapsed)
 
-def numpyAlgorithm():
+def numpyAlgorithm(lyst):
 	if rank == 0:
 		start = time.time()
-		np.sort(lystbck.copy())
+		np.sort(lyst.copy())
 		elapsed = time.time() - start
 		print('NumPy sort: %f sec' % elapsed)
 

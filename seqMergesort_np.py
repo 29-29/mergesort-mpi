@@ -1,9 +1,9 @@
 import numpy as np
 import time
 
-def sequentialAlgorithm():
+def sequentialAlgorithm(lyst):
 	start = time.time()
-	mergesort(lystbck.copy())
+	mergesort(lyst.copy())
 	elapsed = time.time() - start
 	print('Sequential: %f sec' % elapsed)
 

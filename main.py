@@ -20,7 +20,7 @@ if __name__ == '__main__':
 	for hostfile in hostfiles:
 		for n in Ns:
 			# sequential
-			time = mpi(n,modes[0],hostfile)
+			time = mpi(str(n),modes[0],hostfile)
 			times.append({
 				'N':n,'Mode':'sequential','Time':time
 			})
@@ -31,7 +31,7 @@ if __name__ == '__main__':
 					# threaded sort
 					if s_method == 't':
 						for threads in thread_counts:
-							time = mpi(n,[modes[1],m_method,s_method,threads],hostfile)
+							time = mpi(str(n),[modes[1],m_method,s_method,threads],hostfile)
 							times.append({
 								'N':n,'Mode':'parallel',
 								'MergeMethod':('gather' if m_method == 'g' else 'hierarchical'),
@@ -40,7 +40,7 @@ if __name__ == '__main__':
 							})
 					# sequential sort
 					else:
-						time = mpi(n,[modes[1],m_method,s_method],hostfile)
+						time = mpi(str(n),[modes[1],m_method,s_method],hostfile)
 						times.append({
 							'N':n,'Mode':'parallel',
 							'MergeMethod':('gather' if m_method == 'g' else 'hierarchical'),

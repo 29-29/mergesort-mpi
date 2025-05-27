@@ -72,12 +72,13 @@ def incSlots():
 	for n in slots:
 		print(n)
 		for m_method in merge:
-			print('\t%s'%('gather' if m_method == 'g' else 'hierarchical'))
+			print('\t%s' % ('gather' if m_method == 'g' else 'hierarchical'))
 			for s_method in sort:
-				print('\t\t%s'%('threaded' if s_method == 't' else 'sequential'))
+				print('\t\t%s' % ('threaded' if s_method == 't' else 'sequential'))
 				if s_method == 't':
 					for threads in thread_counts:
-						time = mpi(str(Ns[-1]),[modes[1],m_method,s_method,threads],'hostfile_all',slots=n)
+						print('\t\t\t%s' % threads)
+						time = mpi(str(Ns[-1]),[modes[1],m_method,s_method,str(threads)],'hostfile_all',slots=n)
 						times.append({
 							'N':Ns[-1],'Mode':'parallel',
 							'MergeMethod':('gather' if m_method == 'g' else 'hierarchical'),

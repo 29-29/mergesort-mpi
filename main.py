@@ -25,7 +25,7 @@ if __name__ == '__main__':
 			print('\t',n)
 			# sequential
 			print('\t\tsequential')
-			time = mpi(str(n),modes[0],hostfile)
+			time = mpi(str(n),['seq'],hostfile)
 			times.append({
 				'N':n,'Mode':'sequential','Time':time
 			})

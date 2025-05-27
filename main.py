@@ -10,7 +10,7 @@ merge 				= ['g','h']
 sort 					= ['s','t']
 thread_counts = [1, 2, 4]
 hostfiles 		= ['hostfile_all','hostfile_servers']
-slots					= [i for i in range(1, 32)]
+slots					= [i for i in range(1, 2**32)]
 
 def mpi(N, args, hostfile, slots=None)->float:
 	mpirun = [
@@ -20,7 +20,7 @@ def mpi(N, args, hostfile, slots=None)->float:
 	]
 
 	if slots:
-		mpirun += ['--np',str(slots)]
+		mpirun += ['--np',str(slots),'--oversubscribe']
 
 	mpirun += ['python3','src/main.py']
 	time = subprocess.run([*mpirun,*args,N], stdout=subprocess.PIPE)
@@ -72,12 +72,12 @@ def incSlots():
 	for n in slots:
 		print(n)
 		for m_method in merge:
-			print('\t%s' % ('gather' if m_method == 'g' else 'hierarchical'))
+			print(' %s' % ('gather' if m_method == 'g' else 'hierarchical'))
 			for s_method in sort:
-				print('\t\t%s' % ('threaded' if s_method == 't' else 'sequential'))
+				print('  %s' % ('threaded' if s_method == 't' else 'sequential'))
 				if s_method == 't':
 					for threads in thread_counts:
-						print('\t\t\t%s' % threads)
+						print('   %s' % threads)
 						time = mpi(str(Ns[-1]),[modes[1],m_method,s_method,str(threads)],'hostfile_all',slots=n)
 						times.append({
 							'N':Ns[-1],'Mode':'parallel',

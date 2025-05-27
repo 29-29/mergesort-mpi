@@ -1,8 +1,8 @@
 
 from mpi4py import MPI
 import numpy as np
-from src.mpiMergesort_np import numpyAlgorithm, parallelAlgorithm
-from src.seqMergesort_np import sequentialAlgorithm
+from mpiMergesort_np import numpyAlgorithm, parallelAlgorithm
+from seqMergesort_np import sequentialAlgorithm
 import sys
 
 if __name__ == "__main__":

@@ -31,7 +31,7 @@ if __name__ == '__main__':
 					# threaded sort
 					if s_method == 't':
 						for threads in thread_counts:
-							time = mpi(str(n),[modes[1],m_method,s_method,threads],hostfile)
+							time = mpi(str(n),[modes[1],m_method,s_method,str(threads)],hostfile)
 							times.append({
 								'N':n,'Mode':'parallel',
 								'MergeMethod':('gather' if m_method == 'g' else 'hierarchical'),

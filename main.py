@@ -21,16 +21,16 @@ if __name__ == '__main__':
 	for hostfile in hostfiles:
 		print(hostfile)
 		for n in Ns:
-			print(n)
+			print('\t',n)
 			# sequential
-			print('sequential')
+			print('\t\tsequential')
 			time = mpi(str(n),modes[0],hostfile)
 			times.append({
 				'N':n,'Mode':'sequential','Time':time
 			})
 
 			# parallel
-			print('parallel')
+			print('\t\tparallel')
 			for m_method in merge:
 				for s_method in sort:
 					# threaded sort

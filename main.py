@@ -13,9 +13,8 @@ hostfiles 		= ['hostfile_all','hostfile_servers']
 def mpi(N, args, hostfile)->float:
 	mpirun = ['mpirun','--mca','btl_tcp_if_include','br0','--hostfile',hostfile,'python3','src/main.py']
 	time = subprocess.run([*mpirun,*args,N], stdout=subprocess.PIPE)
-	# return float(time.stdout.decode().strip())
-	print(time.stdout.decode().strip())
-	return 0
+	time = time.stdout.decode().strip() or 0
+	return float(time)
 
 if __name__ == '__main__':
 	times = []

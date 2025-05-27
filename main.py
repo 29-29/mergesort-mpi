@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import subprocess
 import csv
@@ -53,4 +54,5 @@ if __name__ == '__main__':
 							'Time':time
 						})
 	df = pd.DataFrame(times)
+	os.makedirs('results',exist_ok=True)
 	df.to_csv('results/runtimes.csv',index=False)

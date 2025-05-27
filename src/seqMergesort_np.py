@@ -42,4 +42,4 @@ if __name__ == '__main__':
 	# Example usage
 	N = 1_000_000
 	lystbck = np.random.randint(1, N, N)
-	sequentialAlgorithm()
+	sequentialAlgorithm(lystbck.copy())

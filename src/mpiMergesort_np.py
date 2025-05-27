@@ -1,3 +1,4 @@
+from typing import Any
 from mpi4py import MPI
 import numpy as np
 from parMergesort_np import mergeSortParallelThreads
@@ -33,7 +34,7 @@ def parallelAlgorithm(lyst, gather=False, pool=False, threads=1):
 
 	# gather merge
 	if gather:
-		gathered_chunks = comm.gather(local_sorted_chunk, root=0)
+		gathered_chunks:list[Any] = comm.gather(local_sorted_chunk, root=0) or []
 		if rank == 0:
 			merged = gathered_chunks[0]
 			for i in range(1, size):
@@ -68,5 +69,5 @@ def numpyAlgorithm(lyst):
 if __name__ == "__main__":
 	# mp.set_start_method('spawn', force=True)  # Use 'spawn' for Windows compatibility
 	# sequentialAlgorithm()
-	parallelAlgorithm(gather=True)
+	parallelAlgorithm(lystbck.copy(), gather=True)
 	# numpyAlgorithm()

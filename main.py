@@ -19,14 +19,18 @@ def mpi(N, args, hostfile)->float:
 if __name__ == '__main__':
 	times = []
 	for hostfile in hostfiles:
+		print(hostfile)
 		for n in Ns:
+			print(n)
 			# sequential
+			print('sequential')
 			time = mpi(str(n),modes[0],hostfile)
 			times.append({
 				'N':n,'Mode':'sequential','Time':time
 			})
 
 			# parallel
+			print('parallel')
 			for m_method in merge:
 				for s_method in sort:
 					# threaded sort

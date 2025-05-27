@@ -3,7 +3,7 @@ import subprocess
 import csv
 
 # PARAMETERS
-Ns 						= [10**i for i in range(1, 11)]
+Ns 						= [10**i for i in range(1, 7)] # up to a million bc 10^7 takes 100s
 modes 				= ['seq','par']
 merge 				= ['g','h']
 sort 					= ['s','t']
@@ -13,7 +13,9 @@ hostfiles 		= ['hostfile_all','hostfile_servers']
 def mpi(N, args, hostfile)->float:
 	mpirun = ['mpirun','--mca','btl_tcp_if_include','br0','--hostfile',hostfile,'python3','src/main.py']
 	time = subprocess.run([*mpirun,*args,N], stdout=subprocess.PIPE)
-	return float(time.stdout.decode().strip())
+	# return float(time.stdout.decode().strip())
+	print(float(time.stdout.decode().strip()))
+	return 0
 
 if __name__ == '__main__':
 	times = []

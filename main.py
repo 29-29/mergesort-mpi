@@ -13,7 +13,7 @@ hostfiles 		= ['hostfile_all','hostfile_servers']
 slots					= [i for i in range(1, 32)]
 
 def mpi(N, args, hostfile, slots=None)->float:
-	mpirun = ['mpirun','--mca','btl_tcp_if_include','br0','--hostfile',hostfile,'--np' if slots else '',slots if slots else '','python3','src/main.py']
+	mpirun = ['mpirun','--mca','btl_tcp_if_include','br0','--hostfile',hostfile,'--np' if slots else '',str(slots) if slots else '','python3','src/main.py']
 	time = subprocess.run([*mpirun,*args,N], stdout=subprocess.PIPE)
 	time = time.stdout.decode().strip() or 0
 	return float(time)

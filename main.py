@@ -10,7 +10,7 @@ merge 				= ['g','h']
 sort 					= ['s','t']
 thread_counts = [1, 2, 4]
 hostfiles 		= ['hostfile_all','hostfile_servers']
-slots					= [i for i in range(1, 2**32)]
+slots					= [i for i in range(1, 2**6)] # 1 --> 32
 
 def mpi(N, args, hostfile, slots=None)->float:
 	mpirun = [

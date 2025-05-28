@@ -9,7 +9,7 @@ modes 				= ['seq','par']
 merge 				= ['g','h']
 sort 					= ['s','t']
 thread_counts = [1, 2, 4]
-hostfiles 		= ['hostfile_all','hostfile_servers']
+hostfiles 		= [('hostfile_all',23),('hostfile_servers',16)]
 slots					= [i for i in range(1, 25)] # 1 --> 24
 
 def mpi(N, args, hostfile, slots=None)->float:
@@ -30,38 +30,38 @@ def mpi(N, args, hostfile, slots=None)->float:
 def incN():
 	times = []
 	for hostfile in hostfiles:
-		print(hostfile)
+		print(hostfile[0])
 		for n in Ns:
-			print('\t',n)
+			print(' ',n)
 			# sequential
-			print('\t\tsequential')
-			time = mpi(str(n),['seq'],hostfile)
+			print('  sequential')
+			time = mpi(str(n),['seq'],hostfile[0])
 			times.append({
-				'N':n,'Mode':'sequential','Time':time
+				'N':n,'Mode':'sequential','Time':time,'Slots':hostfile[1]
 			})
 
 			# parallel
-			print('\t\tparallel')
+			print('  parallel')
 			for m_method in merge:
 				for s_method in sort:
 					# threaded sort
 					if s_method == 't':
 						for threads in thread_counts:
-							time = mpi(str(n),[modes[1],m_method,s_method,str(threads)],hostfile)
+							time = mpi(str(n),[modes[1],m_method,s_method,str(threads)],hostfile[0])
 							times.append({
 								'N':n,'Mode':'parallel',
 								'MergeMethod':('gather' if m_method == 'g' else 'hierarchical'),
 								'SortMethod':'threaded','Threads':threads,
-								'Time':time
+								'Time':time,'Slots':hostfile[1]
 							})
 					# sequential sort
 					else:
-						time = mpi(str(n),[modes[1],m_method,s_method],hostfile)
+						time = mpi(str(n),[modes[1],m_method,s_method],hostfile[0])
 						times.append({
 							'N':n,'Mode':'parallel',
 							'MergeMethod':('gather' if m_method == 'g' else 'hierarchical'),
 							'SortMethod':'sequential',
-							'Time':time
+							'Time':time,'Slots':hostfile[1]
 						})
 	df = pd.DataFrame(times)
 	os.makedirs('results',exist_ok=True)

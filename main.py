@@ -32,7 +32,7 @@ def incN():
 	for hostfile in hostfiles:
 		print(hostfile[0])
 		for n in Ns:
-			print(' ',n)
+			print(' %s'%n)
 			# sequential
 			print('  sequential')
 			time = mpi(str(n),['seq'],hostfile[0])
@@ -43,10 +43,13 @@ def incN():
 			# parallel
 			print('  parallel')
 			for m_method in merge:
+				print('   %s'%('gather' if m_method=='g' else 'hierarchical'))
 				for s_method in sort:
+					print('    %s'%('threads' if s_method=='t' else 'sequential'))
 					# threaded sort
 					if s_method == 't':
 						for threads in thread_counts:
+							print('     %s'%threads)
 							time = mpi(str(n),[modes[1],m_method,s_method,str(threads)],hostfile[0])
 							times.append({
 								'N':n,'Mode':'parallel',
@@ -99,6 +102,6 @@ def incSlots():
 	df.to_csv('results/incSlots.csv',index=False)
 
 if __name__ == '__main__':
-	# incN()
+	incN()
 	incSlots()
 	pass

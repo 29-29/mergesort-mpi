@@ -1,0 +1,1000 @@
+  460  rm -rf ~/.ssh/id_rsa*
+  461  ssh-keygen -t rsa -N ""
+  462  ssh-copy-id badron@badron
+  463  ssh badron@badron hostname
+  464  sudo ufw allow 22
+  465  ssh badron@badron hostname
+  466  ssh badron@192.168.0.145
+  467  ssh -i .ssh/id_rsa badron@badron
+  468  vim .ssh/config
+  469  sudo setenforce 0
+  470  ssh badron@badron hostname
+  471  ssh -i .ssh/id_rsa badron@badron
+  472  sudo shutdown -h now
+  473  exit
+  474  virsh start vm02-badron
+  475  virsh start vm01-mangorangca 
+  476  virsh console vm02-badron 
+  477  exit
+  478  rm -rf .ssh/
+  479  ssh badron@badron
+  480  ssh-keygen -t rsa
+  481  cat ~/.ssh/id_rsa.pub | ssh badron@badron "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  482  ssh badron@badron
+  483  cat ~/.ssh/id_rsa.pub | ssh mangorangca@mangorangca "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  484  ssh mangorangca@mangorangca
+  485  history
+  486  mpirun --host badron,mangorangca -np 2 hostname
+  487  cat ~/.ssh/id_rsa.pub | ssh csc175@badron "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  488  cat ~/.ssh/id_rsa.pub | ssh csc175@mangorangca "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  489  mpirun --host badron,mangorangca -np 2 hostname
+  490  mpirun --hostfile ./hostfile -m python3 mpi4py.bench helloworld -np 6
+  491  history
+  492  mpirun --hostfile ~/hostfile -np 6 python3 mpi4py.bench helloworld
+  493  mpirun -np 4 python3 mpi4py.bench helloworld
+  494  mpiexec -np 4 python3 mpi4py.bench helloworld
+  495  mpiexec -n 4 python3 -m mpi4py.bench helloworld
+  496  mpirun --hostfile ~/hostfile -np 6 python3 -m mpi4py.bench helloworld
+  497  vim mwehehe-badron/readme.md 
+  498  history
+  499  vim mwehehe-badron/readme.md 
+  500  mpirun --hostfile ~/hostfile -np 6 python3 -m mpi4py.bench helloworld
+  501  vim mwehehe-badron/readme.md 
+  502  ls
+  503  tree
+  504  sudo apt install tree
+  505  tree
+  506  vim readme.md
+  507  tree
+  508  vim mwehehe-badron/readme.md 
+  509  exit
+  510  mpirun --hostfile ~/hostfile -np 6 python3 -m mpi4py.bench helloworld
+  511  netstat
+  512  sudo apt install net-tools
+  513  apt-get update
+  514  sudo apt-get update
+  515  sudo apt install net-tools
+  516  neofetch
+  517  vim hostfile 
+  518  mpirun --hostfile ~/hostfile -np 6 python3 -m mpi4py.bench helloworld
+  519  sudo apt install nvim
+  520  sudo snap install nvim
+  521  history
+  522  vim hostfile 
+  523  mpirun --hostfile ~/hostfile -np 6 python3 -m mpi4py.bench helloworld
+  524  virsh destroy vm01-mangorangca 
+  525  vim hostfile 
+  526  mpirun --hostfile ~/hostfile -np 8 python3 -m mpi4py.bench helloworld
+  527  mpirun --hostfile ~/hostfile -np 7 python3 -m mpi4py.bench helloworld
+  528  mpirun --hostfile ~/hostfile -np 6 python3 -m mpi4py.bench helloworld
+  529  vim hostfile 
+  530  mpirun --hostfile ~/hostfile -np 6 python3 -m mpi4py.bench helloworld
+  531  vim hostfile 
+  532  mpirun --hostfile ~/hostfile -np 7 python3 -m mpi4py.bench helloworld
+  533  vim hostfile 
+  534  mpirun --hostfile ~/hostfile -np 8 python3 -m mpi4py.bench helloworld
+  535  vim hostfile 
+  536  htop
+  537  vim hostfile 
+  538  mpirun --hostfile ~/hostfile -np 9 python3 -m mpi4py.bench helloworld
+  539  vim hostfile 
+  540  mpirun --hostfile ~/hostfile -np 10 python3 -m mpi4py.bench helloworld
+  541  vim hostfile 
+  542  mpirun --hostfile ~/hostfile python3 -m mpi4py.bench helloworld -np 16
+  543  mpirun --hostfile ~/hostfile -np 16 python3 -m mpi4py.bench helloworld
+  544  vim hostfile 
+  545  mpirun --hostfile ~/hostfile -np 100 python3 -m mpi4py.bench helloworld
+  546  vim hostfile 
+  547  mpirun --hostfile ~/hostfile -np 8 python3 -m mpi4py.bench helloworld
+  548  virsh start vm01-mangorangca 
+  549  mpirun --hostfile ~/hostfile -np 8 python3 -m mpi4py.bench helloworld
+  550  la
+  551  ls -la
+  552  ls .config/
+  553  vim .vimrc
+  554  vmi
+  555  vim
+  556  vim .vimrc
+  557  ls
+  558  cd mwehehe-badron/
+  559  ls
+  560  vim integral_pi.py
+  561  vim .vimrc
+  562  vim ~/.vimrc 
+  563  vim ~/mwehehe-badron/integral_pi.py 
+  564  vim ~/.vimrc 
+  565  vim ~/mwehehe-badron/integral_pi.py 
+  566  vim ~/.vimrc 
+  567  vim ~/mwehehe-badron/integral_pi.py 
+  568  rm ~/mwehehe-badron/integral_pi.py 
+  569  ls
+  570  history
+  571  cd
+  572  vim ~/hostfile 
+  573  vim /etc/hosts
+  574  ssh badron@badron
+  575  ssh csc175@badron
+  576  vim ~/hostfile 
+  577  vim ~/hostfile_all
+  578  vim /etc/hosts
+  579  sudo vim /etc/hosts
+  580  mpirun --hostfile ~/hostfile -np 8 python3 -m mpi4py.bench helloworld
+  581  sudo vim /etc/hosts
+  582  vim mwehehe-badron/readme.md 
+  583  cat ~/.ssh/id_rsa.pub | ssh server01@192.168.0.140 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  584  cat ~/.ssh/id_rsa.pub | ssh csc175@server01 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  585  cat ~/.ssh/id_rsa.pub | ssh csc175@server03 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  586  ssh salih@salih
+  587  cat ~/.ssh/id_rsa.pub | ssh csc175@salih "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  588  ssh rosique_148@rosique
+  589  cat ~/.ssh/id_rsa.pub | ssh csc175@rosique "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  590  cat ~/.ssh/id_rsa.pub | ssh csc175@server04 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  591  ssh csc175@server04
+  592  vim hostfile_all 
+  593  mpirun --hostfile ~/hostfile_all -np 31 python3 -m mpi4py.bench helloworld
+  594  vim hostfile_all 
+  595  mpirun --hostfile ~/hostfile_all -np 23 python3 -m mpi4py.bench helloworld
+  596  sudo vim /etc/hosts
+  597  vim hostfile_all 
+  598  mpirun --hostfile ~/hostfile_all -np 16 python3 -m mpi4py.bench helloworld
+  599  mpirun --hostfile ~/hostfile python3 -m mpi4py.bench helloworld
+  600  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  601  ssh server01
+  602  ssh csc175@server01
+  603  mpirun python3 -m mpi4py.bench helloworld
+  604  vim hostfile
+  605  mpirun --hostfile ~/hostfile python3 -m mpi4py.bench helloworld
+  606  vim hostfile
+  607  vim hostfile_all 
+  608  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  609  ssh csc175@server01
+  610  ping server01
+  611  host server01
+  612  host badron
+  613  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld --mca routed direct
+  614  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld --mca routed=direct
+  615  mpirun --mca routed=direct --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  616  mpirun --mca routed direct --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  617  mpirun --mca routed=direct --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  618  vim hostfile_all 
+  619  mpirun --mca routed=direct --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  620  mpirun --mca routed=direct --hostfile ~/hostfile python3 -m mpi4py.bench helloworld
+  621  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  622  vim hostfile_all 
+  623  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  624  ssh csc175@server01 "sudo ufw disable"
+  625  ssh csc175@server01 "sudo ufw disable -S csc175"
+  626  ssh csc175@server01 "sudo ufw disable" -S "csc175"
+  627  ssh csc175@server01
+  628  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  629  ssh csc175@server01
+  630  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  631  vim hostfile_all 
+  632  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  633  vim hostfile_all 
+  634  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  635  vim hostfile_all 
+  636  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  637  vim hostfile_all 
+  638  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  639  ssh csc175@salih
+  640  vim hostfile_all 
+  641  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  642  virsh list --a;;
+  643  virsh list --all
+  644  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  645  ssh csc175@badron
+  646  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  647  ssh csc175@server03 "which orted"
+  648  vim hostfile_all 
+  649  ssh csc175@server03
+  650  virsh list
+  651  vim hostfile_all 
+  652  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  653  vim hostfile_all 
+  654  ssh rosique
+  655  cat ~/.ssh/id_rsa.pub | ssh csc175@rosique "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  656  mpirun --hostfile ~/hostfile_all python3 -m mpi4py.bench helloworld
+  657  ssh rosique
+  658  cat ~/.ssh/id_rsa.pub | ssh rosique "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  659  ssh rosique
+  660  ssh rosique@rosique
+  661  vim /etc/hosts
+  662  sudo vim /etc/hosts
+  663  ssh rosique
+  664  sudo vim /etc/hosts
+  665  ssh rosique
+  666  ssh salih
+  667  ssh-copy-id rosique
+  668  ssh rosique
+  669  vim hostfile_all 
+  670  sudo virsh list --state-running --name | xargs -I {} sudo virsh shutdown {}
+  671  sudo shutdown -h now
+  672  clear
+  673  sudo shutdown -h now
+  674  clear
+  675  history
+  676  virt-manager
+  677  history
+  678  ssh salih
+  679  virsh start vm01-mangorangca
+  680  ssh mangorangca@192.168.0.144
+  681  history
+  682  virsh start vm02-badron
+  683  history
+  684  vim hostfile
+  685  clear
+  686  history
+  687  clear
+  688  history | more
+  689  clear
+  690  history | more
+  691  clear
+  692  history | more
+  693  csc175
+  694  cleqr
+  695  virt-manager
+  696  ccc
+  697  history
+  698  virsh list -all
+  699  virst list --all
+  700  virsh list --all
+  701  virsh shutdown vm01-mangorangca
+  702  virsh list --all
+  703  virsh shutdown vm02-badron
+  704  virsh list --all
+  705  sudo shutdown now
+  706  history
+  707  virsh start vm01-mangorangca
+  708  virsh start vm02-badron
+  709  virt-manager
+  710  virsh console
+  711  virsh console vm01-mangorangca
+  712  scp
+  713  ls
+  714  ping 172.31.202.165
+  715  ping aisha@172.31.202.165
+  716  ping 172.31.202.165
+  717  ping 192.168.114.1
+  718  history
+  719  virsh start vm01-mangorangca 
+  720  virsh start vm02-badron 
+  721  virsh ls
+  722  virsh list
+  723  virsh console vm01-mangorangca 
+  724  virsh autostart vm01-mangorangca 
+  725  virsh autostart vm02
+  726  virsh autostart vm02-badron 
+  727  virsh list --all --autostart
+  728  awk -F: '$3 >= 1000 && $3 < 65534 { print $1 }' /etc/passwd
+  729  ls
+  730  ls hostfile_all 
+  731  vim hostfile_all 
+  732  history
+  733  sudo vim /etc/hosts
+  734  vim hostfile_all 
+  735  mpirun python3 -m mpi4py.bench helloworld
+  736  exit
+  737  ssh csc175@badron
+  738  ssh csc175@mangorangca 
+  739  ssh csc175@192.168.0.147
+  740  history
+  741  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  742  ssh csc175@server01
+  743  ssh csc175@server03
+  744  ssh csc175@server04
+  745  ssh abdulmanan
+  746  ssh bucay
+  747  ssh rosique
+  748  ssh salih
+  749  ssh server04
+  750  ssh cali
+  751  ssh junaid
+  752  history
+  753  sudo vim /etc/hosts
+  754  ssh junaid
+  755  vim hostfile_all 
+  756  history 
+  757  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  758  mpirun --hostfile ./hostfile python3 -m mpi4py.bench helloworld
+  759  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  760  ssh server01
+  761  ssh abdulmanan
+  762  ssh buca
+  763  ssh bucay
+  764  ssh server01
+  765  ssh server03
+  766  ssh-copy-id server03
+  767  ssh server03
+  768  ssh server04
+  769  ssh abdulmanan
+  770  ssh-copy-id abdulmanan 
+  771  ssh-copy-id bucay 
+  772  ssh-copy-id rosique 
+  773  ssh-copy-id cali 
+  774  ssh-copy-id junaid 
+  775  ssh server03
+  776  history
+  777  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  778  vim hostfile_all 
+  779  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld --verbose
+  780  mpirun --verbose --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  781  ssh cali
+  782  ssh junaid 
+  783  ssh server03
+  784  ssh rosique 
+  785  ssh server01
+  786  ssh abdulmanan 
+  787  ssh bucay 
+  788  mpirun python3 -m mpi4py.bench helloworld
+  789  ssh mangorangca 
+  790  ssh badron
+  791  ssh salih
+  792  ssh server03
+  793  ssh rosique 
+  794  history
+  795  vim hostfile_all 
+  796  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld --verbose
+  797  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  798  orte-clean
+  799  ls /tmp/
+  800  sudo -rf /tmp/ompi.server02.1000/
+  801  sudo rm -rf /tmp/ompi.server02.1000/
+  802  orte-clean
+  803  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  804  mpirun --hostfile ./hostfile python3 -m mpi4py.bench helloworld
+  805  vim hostfile
+  806  vim hostfile_all 
+  807  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  808  ping 192.168.122.1
+  809  ssh 192.168.122.1
+  810  ip a
+  811  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  812  vim hostfile_all 
+  813  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  814  vim hostfile_all 
+  815  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  816  pkill -9 -u $USER -f mpirun
+  817  pkill -9 -u $USER -f mpi
+  818  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  819  pkill -9 -u $USER -f mpirun
+  820  pkill -9 -u $USER -f mpi
+  821  rm -rf /tmp/openmpi*
+  822  rm -rf /tmp/ompi.*
+  823  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  824  rm -rf /tmp/ompi.*
+  825  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  826  vim hostfile_all 
+  827  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  828  vim hostfile_all 
+  829  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  830  sudo du -ah /tmp | sort -rh | head -n 20
+  831  sudo rm -rf /tmp
+  832  vim hostfile_all 
+  833  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  834  sudo mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  835  sudo mpirun --allow-run-as-root --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  836  sudo mkdir /tmp/
+  837  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  838  orte_init
+  839  sudo mpirun --allow-run-as-root --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  840  vim hostfile_all 
+  841  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  842  sudo reboot now
+  843  history
+  844  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  845  vim hostfile_all 
+  846  ssh badron
+  847  ssh mangorangca 
+  848  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  849  vim hostfile
+  850  vim hostfile_all 
+  851  mpirun --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  852  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  853  vim hostfile_all 
+  854  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  855  vim hostfile_all 
+  856  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  857  vim hostfile_all 
+  858  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python3 -m mpi4py.bench helloworld
+  859  ls
+  860  ls mwehehe-badron/
+  861  ls goodstuff-meowlord-mangorangca/
+  862  mkdir src
+  863  cd src/
+  864  ls
+  865  vim mergesort.py
+  866  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python3 -m mergesort.py 
+  867  cd 
+  868  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python3 -m src/mergesort.py 
+  869  vim mpi.sh 
+  870  chmod +x mpi.sh 
+  871  vim scp.sh
+  872  chmod +x scp.sh 
+  873  ./scp.sh 
+  874  pip install scp
+  875  ssh mangorangca 
+  876  ssh badron
+  877  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all pip install scp
+  878  vim scp.sh 
+  879  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all scp csc175@192.168.0.143:/home/csc175/scp.sh ~/src/mergesort.py
+  880  sudo vim /etc/hosts
+  881  ssh abdulmanan 
+  882  ssh bucay
+  883  history
+  884  ssh cali
+  885  ssh bucay
+  886  ssh aliah@bucay
+  887  ssh bucay
+  888  ssh badron
+  889  ssh csc175@badron
+  890  ssh mangorangca 
+  891  ssh server03
+  892  ssh salih
+  893  ssh rosique 
+  894  ssh server04
+  895  ssh cali
+  896  ssh junaid 
+  897  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all scp csc175@192.168.0.143:/home/csc175/scp.sh ~/src/mergesort.py
+  898  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all ssh-copy-id csc175@server02
+  899  ssh abdulmanan 
+  900  ssh bucay 
+  901  ssh badron
+  902  ssh csc175@badron
+  903  ssh mangorangca 
+  904  ssh server03
+  905  ssh rosique 
+  906  ssh server04
+  907  ssh cali 
+  908  ssh junaid 
+  909  history
+  910  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all ssh-copy-id csc175@server02
+  911  history
+  912  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all scp csc175@192.168.0.143:/home/csc175/scp.sh ~/src/mergesort.py
+  913  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all scp csc175@server02:/home/csc175/scp.sh ~/src/mergesort.py
+  914  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all mkdir ~/src
+  915  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all ls
+  916  cp hostfile_all hostfile_sh
+  917  vim hostfile_sh
+  918  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh ls
+  919  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh rm mergesort.py
+  920  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh ls
+  921  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh ls src
+  922  ls
+  923  ssh abdulmanan 
+  924  ssh bucay 
+  925  ssh csc175@badron
+  926  vim .ssh/config 
+  927  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh ls
+  928  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all mkdir ~/src
+  929  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh mkdir ~/src
+  930  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh ls
+  931  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh ls src
+  932  history
+  933  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh scp csc175@server02:/home/csc175/scp.sh ~/src/mergesort.py
+  934  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh ls src
+  935  vim mpi.sh 
+  936  vim scp.sh 
+  937  vim mpi.sh 
+  938  ./mpi.sh 
+  939  vim mpi.sh 
+  940  ./mpi.sh 
+  941  vim mpi.sh 
+  942  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python -m ~/src/mergesort.py 
+  943  vim mpi.sh 
+  944  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_all python3 -m ~/src/mergesort.py 
+  945  vim mpi.sh 
+  946  ./mpi.sh 
+  947  vim mpi.sh 
+  948  ./mpi.sh 
+  949  vim scp.sh 
+  950  vim mpi.sh 
+  951  ./mpi.sh 
+  952  vim mpi.sh 
+  953  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh pip install numpy
+  954  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh sudo apt install git
+  955  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh sudo -S csc175 apt install git
+  956  ssh abdulmanan 
+  957  ssh bucay 
+  958  ssh badron
+  959  ssh mangorangca 
+  960  ssh server03
+  961  ssh rosique 
+  962  ssh server04
+  963  ssh cali 
+  964  ssh junaid 
+  965  cd src/
+  966  cd ..
+  967  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh rm -rf src/
+  968  mkdir merge
+  969  cd merge/
+  970  git init
+  971  vim mergesort.py
+  972  git status
+  973  git add .
+  974  git status
+  975  git commit
+  976  git config --global user.email "server02@csc175"
+  977  git config --global user.name "server02"
+  978  git commit
+  979  cd ..
+  980  git clone --bare merge/ merge.git
+  981  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh git clone csc175@server02:/home/csc175/merge.git
+  982  vim mpi.sh 
+  983  ls
+  984  ls merge
+  985  ./mpi.sh
+  986  vim mpi.sh 
+  987  ./mpi.sh
+  988  vim mpi.sh 
+  989  ./mpi.sh
+  990  vim mpi.sh 
+  991  ./mpi.sh
+  992  vim mpi.sh 
+  993  ./mpi.sh
+  994  rm -rf merge
+  995  git clone merge.git/
+  996  ls
+  997  ./mpi.sh
+  998  vim merge/mergesort.py 
+  999  ./mpi.sh
+ 1000  vim merge/mergesort_sequential_np2
+ 1001  git add .
+ 1002  git -c merge add .
+ 1003  git -c merge/ add .
+ 1004  git -c ~/merge/ add .
+ 1005  git -C merge add .
+ 1006  git -C merge commit -m "added mergesort_sequential_np2"
+ 1007  git -C merge push
+ 1008  ./mpi.sh
+ 1009  mv merge/mergesort_sequential_np2 merge/mergesort_sequential_np2.py
+ 1010  git -C merge add .
+ 1011  git -C merge status
+ 1012  git -C merge commit -m "renamed to py"
+ 1013  git -C merge push
+ 1014  ./mpi.sh
+ 1015  ls
+ 1016  ls merge
+ 1017  vim merge/mergesort.py 
+ 1018  mv merge/mergesort.py merge/mergesort_mpi.py
+ 1019  git status
+ 1020  git -C merge status
+ 1021  git -C merge add
+ 1022  git -C merge add .
+ 1023  vim merge/mergesort_sequential_np2.py 
+ 1024  vim merge/mergesort_mpi.py 
+ 1025  cat hostfile_sh 
+ 1026  cat mpi.sh 
+ 1027  history
+ 1028  cat mpi.sh 
+ 1029  vim merge/mergesort_sequential_np2.py 
+ 1030  ls
+ 1031  vim hostfile_servers
+ 1032  vim hostfile_all 
+ 1033  cat mpi.sh 
+ 1034  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_servers python3 -m mpi4py.bench helloworld
+ 1035  cat hostfile_servers 
+ 1036  ls merge
+ 1037  vim seqMergesort_np.py
+ 1038  vim parMergesort_np.py
+ 1039  vim mpiMergesort_np.py
+ 1040  mpirun -np 4 python3 mpiMergesort_np.py
+ 1041  mpirun -np 4 python3 merge/mpiMergesort_np.py 
+ 1042  ls
+ 1043  mv parMergesort_np.py merge
+ 1044  ls
+ 1045  mv mpiMergesort_np.py merge
+ 1046  mv seqMergesort_np.py merge
+ 1047  ls
+ 1048  ls merge
+ 1049  mpirun -np 4 python3 merge/mpiMergesort_np.py
+ 1050  mpirun -n 4 python3 merge/mpiMergesort_np.py
+ 1051  df -h /tmp
+ 1052  rm -rf /tmp/openmpi-sessions-*
+ 1053  df -h /tmp
+ 1054  rm -rf /tmp/openmpi-sessions-$(whoami)* /tmp/ompi.*
+ 1055  df -h /tmp
+ 1056  mpirun --mca orte_base_help_aggregate 0 -v -np 4 python3 merge/mpiMergesort_np.py 
+ 1057  ls -l /tmp
+ 1058  ls -l /
+ 1059  rm -rf /tmp/openmpi-sessions-$(whoami)*
+ 1060  rm -rf /tmp/ompi.*
+ 1061  mpirun --mca orte_base_help_aggregate 0 -v -np 4 python3 merge/mpiMergesort_np.py 
+ 1062  mpirun -n 4 hostname
+ 1063  mpirun --mca orte_base_help_aggregate 0 --mca orte_debug 1 -np 4 python3 merge/mpiMergesort_np.py
+ 1064  ls -ld /tmp
+ 1065  df -h /tmp
+ 1066  id
+ 1067  ls -l /tmp/openmpi-sessions-$(whoami)*
+ 1068  rm -rf /tmp/ompi.*
+ 1069  mpirun --mca orte_base_help_aggregate 0 --mca orte_debug 1 -np 4 python3 merge/mpiMergesort_np.py
+ 1070  mpirun --mca orte_base_help_aggregate 0 --mca orte_debug 1 --wdir merge -np 4 python3 mpiMergesort_np.py
+ 1071  mkdir -p $HOME/ompi_tmp
+ 1072  export OMPI_MCA_tmpdir_base=$HOME/ompi_tmp
+ 1073  mpirun -np 4 python3 merge/mpiMergesort_np.py
+ 1074  rm -rf ompi_tmp/
+ 1075  unset OMPI_MCA_tmpdir_base
+ 1076  mpirun -np 4 hostname
+ 1077  vim merge/mpiMergesort_np.py 
+ 1078  mpirun -np 4 python3 merge/mpiMergesort_np.py
+ 1079  git -C merge add .
+ 1080  git -C merge status
+ 1081  git -C merge commit -m "ahmad code"
+ 1082  git -C merge push
+ 1083  vim mpi.sh 
+ 1084  ./mpi.sh 
+ 1085  vim merge/.gitignore
+ 1086  git -C merge add .
+ 1087  git -C merge status
+ 1088  git -C merge commit -m "ignore pycache"
+ 1089  git -C merge push
+ 1090  ./mpi.sh 
+ 1091  history
+ 1092  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh rm merge/__pycache__
+ 1093  mpirun --mca btl_tcp_if_include br0 --hostfile ./hostfile_sh rm -rf merge/__pycache__
+ 1094  ./mpi.sh 
+ 1095  vim mpi.sh 
+ 1096  ./mpi.sh 
+ 1097  vim mpi.sh 
+ 1098  ./mpi.sh 
+ 1099  vim mpi.sh 
+ 1100  ls
+ 1101  vim mpi.sh 
+ 1102  ./mpi.sh 
+ 1103  vim mpi.sh 
+ 1104  ./mpi.sh 
+ 1105  vim mpi.sh 
+ 1106  ./mpi.sh 
+ 1107  vim mpi.sh 
+ 1108  ./mpi.sh 
+ 1109  vim mpi.sh 
+ 1110  ./mpi.sh 
+ 1111  vim mpi.sh 
+ 1112  ./mpi.sh 
+ 1113  git pull
+ 1114  git -C merge pull
+ 1115  vim pull.sh
+ 1116  vim mpi.sh 
+ 1117  ls
+ 1118  chmod +x pull.sh 
+ 1119  chmod +x seq.sh 
+ 1120  chmod +x np.sh 
+ 1121  ./pull.sh 
+ 1122  ./seq.sh 
+ 1123  vim seq.sh 
+ 1124  ./seq.sh 
+ 1125  ./pull.sh 
+ 1126  ./seq.sh 
+ 1127  ./mpi.sh 
+ 1128  vim mpi.sh 
+ 1129  ./mpi.sh 
+ 1130  vim mpi.sh 
+ 1131  ./mpi.sh 
+ 1132  ./mpi.sh & ./mpi.sh 
+ 1133  ./mpi.sh 
+ 1134  ./mpi.sh ; ./mpi.sh 
+ 1135  ./mpi.sh ; ./mpi.sh ; ./mpi.sh 
+ 1136  ./pull.sh 
+ 1137  ./mpi.sh 
+ 1138  ./pull.sh 
+ 1139  ./mpi.sh 
+ 1140  ./mpi.sh ; ./mpi.sh ; ./mpi.sh 
+ 1141  vim mpi.sh 
+ 1142  ./mpi.sh ; ./mpi.sh ; ./mpi.sh 
+ 1143  ./pull.sh 
+ 1144  vim mpi.sh 
+ 1145  ./mpi.sh ;./mpi.sh ;./mpi.sh 
+ 1146  vim mpi.sh 
+ 1147  ./mpi.sh ;./mpi.sh ;./mpi.sh 
+ 1148  ./pull.sh 
+ 1149  vim mpi.sh 
+ 1150  ./mpi.sh ;./mpi.sh ;./mpi.sh 
+ 1151  vim mpi.sh 
+ 1152  ./mpi.sh ;./mpi.sh ;./mpi.sh 
+ 1153  vim np.sh 
+ 1154  ./np.sh ;./np.sh ;./np.sh 
+ 1155  history
+ 1156  sudo shutdown now
+ 1157  exit
+ 1158  vim ping.sh
+ 1159  chmod +x ping.sh 
+ 1160  ./ping.sh 
+ 1161  vim ping.sh
+ 1162  ./ping.sh 
+ 1163  ssh server01
+ 1164  history
+ 1165  ./ping.sh 
+ 1166  vim ping.sh
+ 1167  ssh salih
+ 1168  ssh-copy-id
+ 1169  ssh-copy-id salih
+ 1170  ssh salih
+ 1171  vim hostfile_all 
+ 1172  history
+ 1173  vim ping.sh
+ 1174  cat ping.sh 
+ 1175  ./pull.sh 
+ 1176  vim pull.sh 
+ 1177  mv ping.sh ping_check.sh
+ 1178  ./ping_check.sh 
+ 1179  ./pull.sh 
+ 1180  vim mpi.sh 
+ 1181  ./mpi.sh 
+ 1182  vim mpi.sh 
+ 1183  cat mpi.sh 
+ 1184  vim mpi.sh 
+ 1185  ./mpi.sh 
+ 1186  vim mpi.sh 
+ 1187  ./mpi.sh 
+ 1188  ssh salih
+ 1189  ssh abdulmanan 
+ 1190  vim hostfile_all 
+ 1191  ./mpi.sh 
+ 1192  vim mpi.sh 
+ 1193  ./mpi.sh 
+ 1194  vim mpi.sh 
+ 1195  ./mpi.sh 
+ 1196  vim mpi.sh 
+ 1197  ./mpi.sh seq
+ 1198  vim mpi.sh 
+ 1199  ./mpi.sh seq
+ 1200  ./pull.sh 
+ 1201  ls
+ 1202  cat mpi.sh 
+ 1203  ./mpi.sh seq
+ 1204  ./mpi.sh par g t 1
+ 1205  ./mpi.sh par g t 2
+ 1206  ./mpi.sh par g t 4
+ 1207  ./mpi.sh par g t 8
+ 1208  ./mpi.sh par g s
+ 1209  ./mpi.sh par h t 1
+ 1210  ./mpi.sh par h t 2
+ 1211  ./mpi.sh par h t 4
+ 1212  ./mpi.sh par h s
+ 1213  vim mpi.sh 
+ 1214  history
+ 1215  ./mpi.sh seq
+ 1216  ./mpi.sh par g t 1;./mpi.sh par g t 2;./mpi.sh par g t 4
+ 1217  ./mpi.sh par g s
+ 1218  ./mpi.sh par h t 1;./mpi.sh par h t 2;./mpi.sh par h t 4;./mpi.sh par h s
+ 1219  ./mpi.sh par h t 8
+ 1220  vim mpi.sh 
+ 1221  ./mpi.sh seq
+ 1222  history
+ 1223  ./ping_check.sh 
+ 1224  ssh salih
+ 1225  ssh rosique 
+ 1226  ls
+ 1227  ls merge
+ 1228  cat hostfile
+ 1229  cat hostfile*
+ 1230  cat hostfile_all
+ 1231  ls
+ 1232  cd merge
+ 1233  ls
+ 1234  git pull
+ 1235  cd ..
+ 1236  ls
+ 1237  mv hostfile* merge
+ 1238  ls
+ 1239  ls merge
+ 1240  mv merge/hostfile* .
+ 1241  ls
+ 1242  merge
+ 1243  cd merge
+ 1244  ls
+ 1245  git pull origin
+ 1246  git fetch
+ 1247  git pull ~/merge.git/
+ 1248  git pull ~/merge.git
+ 1249  git status
+ 1250  cd ..
+ 1251  ./pull.sh 
+ 1252  ls merge
+ 1253  cd merge
+ 1254  git remote -v
+ 1255  git fetch
+ 1256  ls
+ 1257  git pull
+ 1258  ssh server01
+ 1259  ../pull.sh 
+ 1260  cd ..
+ 1261  ./pull.sh 
+ 1262  git -c merge log
+ 1263  git -C merge log
+ 1264  ./pull.sh 
+ 1265  ls merge
+ 1266  ls
+ 1267  mv hostfile* merge
+ 1268  ls
+ 1269  ls merge
+ 1270  cat mpi.sh 
+ 1271  history
+ 1272  ls
+ 1273  vim mpi.sh 
+ 1274  ls
+ 1275  ls merge
+ 1276  cd merge
+ 1277  mv main.py src/
+ 1278  ls
+ 1279  git add .
+ 1280  git status
+ 1281  git commit -m "move hostfiles in and main py to src"
+ 1282  git push
+ 1283  ls
+ 1284  ls ../mpi.sh 
+ 1285  cat ../mpi.sh 
+ 1286  ../pull.sh 
+ 1287  cd ..
+ 1288  ../pull.sh 
+ 1289  ./pull.sh 
+ 1290  l
+ 1291  git status 
+ 1292  git -C merge status
+ 1293  vim pull.sh 
+ 1294  ./pull.sh 
+ 1295  vim pull.sh 
+ 1296  ./pull.sh 
+ 1297  cd merge
+ 1298  ls
+ 1299  py main.py 
+ 1300  python3 main.py 
+ 1301  cat ../pull.sh 
+ 1302  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ --hostfile ./merge/hostfile_sh pip install pandas
+ 1303  cd ..
+ 1304  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ --hostfile ./merge/hostfile_sh pip install pandas
+ 1305  cd merge
+ 1306  python3 main.py 
+ 1307  ../pull.sh 
+ 1308  (cd .. && ./pull.sh)
+ 1309  python3 main.py 
+ 1310  cat main.py 
+ 1311  git status
+ 1312  git log
+ 1313  git fetch
+ 1314  vim ../pull.sh 
+ 1315  (cd .. && ./pull.sh)
+ 1316  python3 main.py 
+ 1317  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ --hostfile ./hostfile_sh python3 src/main.py seq 1000
+ 1318  (cd .. && ./pull.sh)
+ 1319  python3 main.py 
+ 1320  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ --hostfile ./hostfile_sh python3 src/main.py seq 1000
+ 1321  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ --hostfile ./hostfile_sh python3 src/main.py seq 10000
+ 1322  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ --hostfile ./hostfile_sh python3 src/main.py seq 100000
+ 1323  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ --hostfile ./hostfile_sh python3 src/main.py seq 1000000
+ 1324  (cd .. && ./pull.sh)
+ 1325  python3 main.py 
+ 1326  (cd .. && ./pull.sh)
+ 1327  python3 main.py 
+ 1328  vim main.py 
+ 1329  ls
+ 1330  vim main.py 
+ 1331  python3 main.py 
+ 1332  vim main.py 
+ 1333  python3 main.py 
+ 1334  (cd .. && ./pull.sh)
+ 1335  (cd .. && ./pull.sh)
+ 1336  python3 main.py 
+ 1337  (cd .. && ./pull.sh)
+ 1338  python3 main.py 
+ 1339  git status
+ 1340  git add results/
+ 1341  ls
+ 1342  ls results/
+ 1343  git commit -m "get runtimes"
+ 1344  git push
+ 1345  (cd .. && ./pull.sh)
+ 1346  python3 main.py 
+ 1347  cat results/runtimes.csv 
+ 1348  (cd .. && ./pull.sh)
+ 1349  python3 main.py 
+ 1350  (cd .. && ./pull.sh)
+ 1351  python3 main.py 
+ 1352  (cd .. && ./pull.sh)
+ 1353  python3 main.py 
+ 1354  (cd .. && ./pull.sh)
+ 1355  python3 main.py 
+ 1356  ls
+ 1357  ls results/
+ 1358  cat results/incSlots.csv 
+ 1359  rm results/incSlots.csv 
+ 1360  ls
+ 1361  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ -np 32 --oversubscription --hostfile ./hostfile_sh python3 src/main.py par h s 1000000
+ 1362  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ -np 32 --oversubscribe --hostfile ./hostfile_sh python3 src/main.py par h s 1000000
+ 1363  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ -np 32 --oversubscribe --hostfile ./hostfile_sh python3 mpi4py.bench
+ 1364  history
+ 1365  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ -np 32 --oversubscribe --hostfile ./hostfile_sh python3 mpi4py.bench helloworld
+ 1366  mpirun --mca btl_tcp_if_include br0 --wdir ~/merge/ -np 32 --oversubscribe --hostfile ./hostfile_sh python3 -m  mpi4py.bench helloworld
+ 1367  (cd .. && ./pull.sh)
+ 1368  python3 main.py 
+ 1369  vim main.py 
+ 1370  python3 main.py 
+ 1371  vim main.py 
+ 1372  python3 main.py 
+ 1373  ls
+ 1374  ls results/
+ 1375  cat results/incSlots.csv 
+ 1376  git add .
+ 1377  git status
+ 1378  git commit -m "ran increasing slots"
+ 1379  git push
+ 1380  brew install tailscale
+ 1381  curl -fsSL https://tailscale/install.sh | sh
+ 1382  sudo apt install tailscale
+ 1383  sudo snap install tailscale
+ 1384  tailscal login --qr
+ 1385  tailscale login --qr
+ 1386  sudo tailscale login --qr
+ 1387  exit
+ 1388  sudo systemctl enable --now tailcaled
+ 1389  sudo systemctl enable --now tailcale
+ 1390  sudo systemctl enable --now tailcaled
+ 1391  tailscale up
+ 1392  sudo tailcale
+ 1393  sudo tailcale up
+ 1394  history
+ 1395  sudo tailscale status
+ 1396  sudo systemctl enable --now tailscale
+ 1397  systemctl status tailscaled
+ 1398  systemctl status tailscale
+ 1399  exit
+ 1400  tailscale login --qr
+ 1401  sudo tailcale login --qr
+ 1402  history
+ 1403  tailscaleup
+ 1404  sudo tailscale up
+ 1405  sudo tailscale status
+ 1406  sudo tailscale login --qr
+ 1407  tailscale status
+ 1408  sudo tailscale up --authkey tskey-auth-krphpbN3nj11CNTRL-V95MrNfTN5cAeVyA22AK5cDiYMRfBhoWU
+ 1409  ./pull.sh 
+ 1410  ./ping_check.sh 
+ 1411  ssh csc175@192.168.0.149
+ 1412  ssh csc175@192.168.0.146
+ 1413  ssh csc175@192.168.0.143
+ 1414  ./ping_check.sh 
+ 1415  ssh csc175@192.168.0.146
+ 1416  ip a
+ 1417  ssh csc175@192.168.0.146
+ 1418  ssh csc175@192.168.0.149
+ 1419  ./ping_check.sh 
+ 1420  ssh csc175@192.168.0.149
+ 1421  ./ping_check.sh 
+ 1422  ./pull.sh 
+ 1423  ssh server01
+ 1424  ssh abdulmanan
+ 1425  ssh bucay
+ 1426  ssh badron
+ 1427  ssh mangorangca 
+ 1428  ssh salih 
+ 1429  ssh server03
+ 1430  ssh rosique 
+ 1431  ./ping_check.sh 
+ 1432  ssh rosique 
+ 1433  ssh server03
+ 1434  ssh rosique 
+ 1435  ./pull.sh 
+ 1436  cd merge
+ 1437  python3 main.py 
+ 1438  rm results/*
+ 1439  ls results/
+ 1440  vim main.py 
+ 1441  python3 main.py 
+ 1442  vim main.py 
+ 1443  rm results/*
+ 1444  ls
+ 1445  ls results/
+ 1446  python3 main.py 
+ 1447  git status
+ 1448  git add .
+ 1449  git status
+ 1450  git commit -m "run
+ 1451  "
+ 1452  git push origin
+ 1453  git status
+ 1454  git fetch
+ 1455  git status
+ 1456  virt
+ 1457  virsh
+ 1458  history
+ 1459  history > ~/merge/history

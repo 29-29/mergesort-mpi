@@ -38,20 +38,19 @@
 	Mindanao State University]
 )
 
-#grid(
-	columns: (1cm,1fr,1cm),
-	// fill: yellow,
-	column-gutter: 2pt,
-	[],
-	[*Abstract*: #lorem(100)]
-)
+// #grid(
+// 	columns: (1cm,1fr,1cm),
+// 	// fill: yellow,
+// 	column-gutter: 2pt,
+// 	[],
+// 	[*Abstract*: #lorem(100)]
+// )
 
-#v(1em)
+// #v(1em)
 #line(length: 100%, stroke: 0.5pt)
 #v(1em)
 
 #show: rest => columns(2, rest)
-// #set page(columns: 2)
 
 #show outline.entry: it => link(
 	it.element.location(),

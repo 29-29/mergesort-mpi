@@ -16,11 +16,11 @@ merge_method = ['gather','hierarchical']
 sort_method = ['sequential','threaded']
 thread_counts = [1,2,4]
 
-def plot_init(title=None, log=False):
+def plot_init(title=None, log=False, N=True):
 	plt.clf()
 	if title:
 		plt.title(title)
-	plt.xlabel('N (Number of Elements)')
+	plt.xlabel('N (Number of Elements)' if N else 'Slots')
 	plt.ylabel('Time (seconds)')
 	if log:
 		plt.xscale('log')
@@ -194,7 +194,7 @@ if __name__ == '__main__':
 	orig_df = df.copy()
 
 	# All Nodes Gather Merge
-	plot_init(title='All Nodes Gather Merge',log=True)
+	plot_init(log=True)
 	_categories = categories(_hostfiles=['all'],_modes=['parallel'],_merge=['gather'])
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
@@ -202,7 +202,7 @@ if __name__ == '__main__':
 	plt.savefig(graphs_dir + 'comparison_all_gather.jpg')
 
 	# All Nodes Hierarchical Merge
-	plot_init(title='All Nodes Hierarchical Merge',log=True)
+	plot_init(log=True)
 	_categories = categories(_hostfiles=['all'],_modes=['parallel'],_merge=['hierarchical'])
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
@@ -215,7 +215,7 @@ if __name__ == '__main__':
 	hierarchical_cols = [col for col in orig_df.columns if 'hierarchical' in col and 'all' in col]
 	df['all_hierarchical'] = df[hierarchical_cols].mean(axis=1)
 
-	plot_init(title='All Nodes Gather vs Hierarchical Merge',log=True)
+	plot_init(log=True)
 	_categories = ['all_gather','all_hierarchical']
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
@@ -223,7 +223,7 @@ if __name__ == '__main__':
 	plt.savefig(graphs_dir + 'comparison_all_parallel.jpg')
 
 	# All Nodes Parallel vs Sequential
-	plot_init(title='All Nodes Parallel vs Sequential',log=True)
+	plot_init(log=True)
 	_categories += categories(_hostfiles=['all'],_modes=['sequential'])
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
@@ -231,7 +231,7 @@ if __name__ == '__main__':
 	plt.savefig(graphs_dir + 'comparison_all.jpg')
 
 	# All vs Server Sequential
-	plot_init(title='All vs Server Nodes Sequential',log=True)
+	plot_init(log=True)
 	_categories = categories(_modes=['sequential'])
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
@@ -244,7 +244,7 @@ if __name__ == '__main__':
 	servers_parallel_cols = [col for col in orig_df.columns if 'parallel' in col and 'servers' in col]
 	df['servers_parallel'] = df[servers_parallel_cols].mean(axis=1)
 
-	plot_init(title='All vs Server Nodes Parallel',log=True)
+	plot_init(log=True)
 	_categories = ['all_parallel','servers_parallel']
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
@@ -257,7 +257,7 @@ if __name__ == '__main__':
 	hierarchical_cols = [col for col in orig_df.columns if 'hierarchical' in col and 'servers' in col]
 	df['servers_hierarchical'] = df[hierarchical_cols].mean(axis=1)
 
-	plot_init(title='All vs Server Nodes Gather',log=True)
+	plot_init(log=True)
 	_categories = ['all_gather','servers_gather']
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
@@ -265,14 +265,18 @@ if __name__ == '__main__':
 	plt.savefig(graphs_dir + 'comparison_gather.jpg')
 
 	# All vs Server Hierarchical
-	plot_init(title='All vs Server Nodes Hierarchical',log=True)
+	plot_init(log=True)
 	_categories = ['all_hierarchical','servers_hierarchical']
 	plot_categories(df,'N',_categories)
 	plt.legend(_categories)
 	# plt.show()
 	plt.savefig(graphs_dir + 'comparison_hierarchical.jpg')
 
+
+
+
 	# INCREASING SLOTS
+
 	df = subset_df(loadDf(pd.read_csv(results_dir + inc_slots_file)), row_label_slots,index='Slots')
 	df.to_csv(results_dir + 'cat_' + inc_slots_file, index=False)
 	orig_df = df.copy()
@@ -281,14 +285,14 @@ if __name__ == '__main__':
 	hierarchical_threaded_cols = [col for col in orig_df.columns if 'gather' in col and 'threaded' in col]
 	df['parallel_gather_threaded'] = df[hierarchical_threaded_cols].mean(axis=1)
 
-	plot_init(title='Gather Merge as Slots Increases')
+	plot_init(N=False)
 	_categories = categories_s(_modes=['parallel'],_merge=['gather'])
 	plot_categories(df,'Slots',_categories)
 	plt.legend(_categories)
 	# plt.show()
 	plt.savefig(graphs_dir + 'slots_gather_expanded.jpg')
 
-	plot_init(title='Gather Merge as Slots Increases')
+	plot_init(N=False)
 	_categories = categories_s(_modes=['parallel'],_merge=['gather'],_sort=['sequential']) + ['parallel_gather_threaded']
 	plot_categories(df,'Slots',_categories)
 	plt.legend(_categories)
@@ -302,14 +306,14 @@ if __name__ == '__main__':
 	hierarchical_threaded_cols = [col for col in orig_df.columns if 'hierarchical' in col and 'threaded' in col]
 	df['parallel_hierarchical_threaded'] = df[hierarchical_threaded_cols].mean(axis=1)
 
-	plot_init(title='Hierarchical Merge as Slots Increases')
+	plot_init(N=False)
 	_categories = categories_s(_modes=['parallel'],_merge=['hierarchical'])
 	plot_categories(df,'Slots',_categories)
 	plt.legend(_categories)
 	# plt.show()
 	plt.savefig(graphs_dir + 'slots_hierarchical_expanded.jpg')
 
-	plot_init(title='Hierarchical Merge as Slots Increases')
+	plot_init(N=False)
 	_categories = categories_s(_modes=['parallel'],_merge=['hierarchical'],_sort=['sequential']) + ['parallel_hierarchical_threaded']
 	plot_categories(df,'Slots',_categories)
 	plt.legend(_categories)
@@ -320,7 +324,7 @@ if __name__ == '__main__':
 	df['parallel_hierarchical'] = df[hierarchical_cols].mean(axis=1)
 
 	# Gather vs Hierarchical
-	plot_init(title='Gather vs Hierarchical Merge as Slots Increases')
+	plot_init(N=False)
 	_categories = ['parallel_gather','parallel_hierarchical']
 	plot_categories(df,'Slots',_categories)
 	plt.legend(_categories)
